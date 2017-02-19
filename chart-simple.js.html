@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+</head>
+<body>
+<canvas id="myChart" width="300px" height="200px"></canvas>
+<script>
+    var ctx = document.getElementById("myChart");
+
+    var data = {
+        labels: [
+            "College",
+            "Residence",
+            "Student Org"
+        ],
+        datasets: [
+            {
+                data: [14, 20, 0],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                ]
+            }]
+    };
+
+    var myChart = new Chart(ctx, {type: 'pie', data: data});
+</script>
+</body>
+</html>
